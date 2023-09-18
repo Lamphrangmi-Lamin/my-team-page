@@ -4,9 +4,6 @@
     max-width: 70%;
 } */
 
-/* span {
-    display: block;
-} */
 /* Header */
 .header {
     display: flex;
@@ -45,9 +42,10 @@ img {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 350px);
-    grid-template-rows: repeat(8, 100px);
+    grid-template-rows: repeat(12, 100px);
     justify-content: center;
     padding-bottom: 8rem;
+    row-gap: .7rem;
 }
 
 /* Grid images */
@@ -95,4 +93,51 @@ span {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     padding-top: .7rem;
+    padding-bottom: .7rem;
+}
+
+/* Design for mobile devices */
+@media only screen and (max-width: 480px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: repeat(12, 50px);
+        row-gap: 3rem;
+        column-gap: 1.5rem;
+    }
+    .one {
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 3;
+    }
+    .two {
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 3;
+    }
+    .three {
+        grid-column: 1 / span 1;
+        grid-row: 5 / span 3;
+    }
+    .four {
+        grid-column: 2 / span 1;
+        grid-row: 6 / span 3;
+    }
+    .five {
+        grid-column: 1 / span 1;
+        grid-row: 9 / span 3;
+    }
+    .six {
+        grid-column: 2 / span 1;
+        grid-row: 10 / span 3;
+    }
+
+    .name {
+        font-size: 0.875rem;
+    }
+    .rotate {
+        font-size: 0.625rem;
+        padding: 2px;
+    }
 }
