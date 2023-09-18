@@ -10,7 +10,9 @@
 /* Header */
 .header {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    column-gap: 22rem;
+    margin-bottom: 4rem;
 }
 
 .header h1 {
@@ -45,6 +47,7 @@ img {
     grid-template-columns: repeat(3, 350px);
     grid-template-rows: repeat(8, 100px);
     justify-content: center;
+    padding-bottom: 8rem;
 }
 
 /* Grid images */
@@ -70,4 +73,26 @@ img {
 }
 .six {
     grid-row: 7 /span 4;
+}
+
+/*Image Captions */
+span {
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.rotate {
+    writing-mode: vertical-lr;
+    padding-left: .7rem;
+}
+
+.name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    padding-top: .7rem;
 }
